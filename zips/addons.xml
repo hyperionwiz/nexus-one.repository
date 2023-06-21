@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.program.nex2us" name="Nex2us Wizard" version="1.0.9" provider-name="The Hood">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.six" />
+    <import addon="script.module.kodi-six" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Nex2us Wizard</summary>
+    <description lang="en">In this wizard you will find the latest Nex2us Wizard and Tools. Thanks whufclee at NaN, GUYS at TI, Brackets for the app installer!! RomanVM for the PyXBMCt libs. Fire TV Guru for the PyXBMCt layout  Also a very special Thanks to Surfacingx for the base code used in this add-on.</description>
+    <platform>all</platform>
+    <assets>
+				<icon>icon.png</icon>
+				<fanart>fanart.jpg</fanart>
+				<banner></banner>
+				<clearlogo></clearlogo>
+				<screenshot></screenshot>
+		</assets>
+  </extension>
+</addon>
+
+<addon id="plugin.program.nexus-alpha" name="[COLOR mediumslateblue]Nexus-Alpha [/COLOR]Wizard" version="2.1.1" provider-name="The Hood">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.kodi.android.update" optional="true" version="1.3.2" />
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+
+    <extension point="xbmc.service" library="startup.py" start="startup" />
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">[COLOR mediumslateblue]Nexus-Alpha [/COLOR]Wizard</summary>
+        <description lang="en">[COLOR mediumslateblue]Nexus-Alpha[/COLOR]Wizard</description>
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.program.super.favourites" name="Super Favourites" version="2.2.6" provider-name="jmooremcc, spoyser">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.metahandler" optional="true" />
+  </requires>
+
+
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video audio image executable</provides>
+  </extension>
+
+
+  <extension point="xbmc.service" library="service.py" start="startup" />
+
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Put all your favourites bits of all your favourites addons into one easy to use addon.</summary>
+    <summary lang="es_ES">Ponga todas sus partes favoritas de todos sus complementos favoritos en un complemento fácil de usar.</summary>
+    <description lang="en_GB">Super Favourites is a better way of managing your Kodi Favourites.[CR][CR]Virtually any menu item within Kodi can be added to Super Favourites, even from addons that don't normally provide this feature.[CR][CR]Super Favourites allows you to better manage your Kodi favourites, including the creation of sub-folders, into which your Kodi favourites can then be copied or moved into.[CR][CR]This allows you to create you own custom addon with just the best bits of your favourite addons. Search your favourite addons, play your favourite music, read your favourite comic strips, select your favourite playlists, browse your favourite movies, listen to your favourite radio stations, watch your favourite cartoons, the possibilities are endless, all from within one easy to use addon.</description>
+    <description lang="es_ES">Super Favoritos es la mejor forma de administrar sus favoritos de Kodi.[CR][CR]Prácticamente cualquier elemento de menú dentro de Kodi se puede agregar a Súper favoritos, incluso desde complementos que normalmente no brindan esta función.[CR][CR]Super Favoritos le permite administrar mejor sus favoritos de Kodi, incluída la creación de subcarpetas, en las que puede copiar o mover sus secciones o addons preferidos.[CR][CR]Esto le permite crear su propio complemento personalizado con lo mejor. Busque sus addons preferidos, reproduzca su música favorita, lea sus historias favoritas, seleccione sus listas de reproducción, explore sus películas, escuche sus estaciones de radio, vea sus dibujos animados, las posibilidades son infinitas, todos sus favoritos desde un solo uso addon, fácil de añadir.</description>
+    <platform>all</platform>
+    <language>en es</language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=192662</forum>
+    <website />
+    <source>https://github.com/spoyser/spoyser-repo/tree/master/plugin.program.super.favourites</source>
+    <source>https://github.com/jmooremcc/plugin.program.super.favourites</source>
+    <email>seanpoyser at gmail.com</email>
+    <email>jmooremcc at hotmail.com</email>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+
+    <news>
+2.2.6 April 2022
+      - Fix context menu settings bug
+      - Fix more issues with activateWindowCommand
+
+2.2.5 February 2022
+      - Generic Fix for activateWindowCommand
+
+2.2.4 February 2022
+      - Fix URL Playback
+
+2.2.3 February 2022
+      - Fix folder lock
+      - Fix name colorization
+
+2.2.1 February 2022
+      - Minor Bug Fix
+
+2.2.0 December 2021
+      - Fixed Play From Here functionality
+      - Fixed handling of local folders so that back button now works correctly
+      - Added threading decorator to utils
+
+2.1.0: 9 October 2021
+      - Added Spanish Translation contributed by populc
+      - Fixed issue in player module
+
+2.0.11: 26 August 2021
+      - Fixed bug in download module that prevented videos from being downloaded
+
+2.0.10: 6 June 2021
+      - Fixed bug that prevented Hebrew language for working
+
+2.0.9: 15 May 2021
+      - Fixed bug in Player.def activateWindowCommand(cmd) that was messing up the ability
+        to return from child direrctories
+
+2.0.8: 14 May 2021
+      - Fixed various incompatibilities with latest version of Matrix involving decode('utf-8')
+        that caused crashes.
+
+2.0.7: 17 February 2021
+    - Fixed remote folder access via another plugin
+
+2.0.6: 11 January 2021
+      - Fixed access to local folders and smb folders
+
+2.0.5: 12 December 2020
+      - More Fixes for Network Folder Failure to Launch
+
+2.0.0: 29 November 2020
+      - Matrix Version
+
+1.0.60: 1 November 2020
+    - Fixed launch issues in Kodi Leia
+
+1.0.59: 29th May 2017
+    - 'Now playing' text now defined by SF due to skin variations
+    </news>
+
+  </extension>
+
+
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+
+      <item library="capture.py">
+        <label>$ADDON[plugin.program.super.favourites 30002]</label>
+        <visible>String.IsEqual(Window(Home).Property(SF_STD_CONTEXTMENU_ENABLED),True) + !StringCompare(Container.PluginName,plugin.program.super.favourites)</visible>
+      </item>
+
+      <item library="menu_addtofaves.py">
+        <label>$ADDON[plugin.program.super.favourites 30047]</label>
+        <visible>String.IsEqual(Window(Home).Property(SF_STD_ADDTOFAVES_ENABLED),True) + !StringCompare(Container.PluginName,plugin.program.super.favourites)</visible>
+      </item>
+
+      <item library="menu_download.py">
+        <label>$ADDON[plugin.program.super.favourites 30259]</label>
+        <visible>String.IsEqual(Window(Home).Property(SF_STD_DOWNLOAD_ENABLED),True) + Player.IsInternetStream</visible>
+      </item>
+
+    </menu>
+  </extension>
+
+</addon>
+
+<addon id="plugin.video.athena"
+	   name="[COLORmediumseagreen]Athena[/COLOR]"
+	   version="1.0.4"
+	   provider-name="The Hood">
+  <requires>
+	<import addon="script.module.resolveurl"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Athena</summary>
+    <description lang="en">Athena Addon</description>
+
+    <platform>all</platform>
+	<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+
+</addon>
+
+<addon id="plugin.video.injustice"
+	   name="Injustice"
+	   version="3.1.7"
+	   provider-name="The Hood">
+  <requires>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension library="resources/modules/" point="xbmc.python.module" />
+  <extension library="resources/sources/" point="xbmc.python.module" />
+  <extension library="resources/" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+	<reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en">The best and latest Movies and TV Shows from around the net</summary>
+    <description lang="en"> Injustice states the media is as fast as possible</description>
+
+    <platform>all</platform>
+	<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+
+</addon>
+
+<addon id="plugin.video.morbius"
+	   name="Morbius"
+	   version="3.2.0"
+	   provider-name="The Hood">
+  <requires>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension library="resources/modules/" point="xbmc.python.module" />
+  <extension library="resources/sources/" point="xbmc.python.module" />
+  <extension library="resources/" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+	<reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en">The best and latest Movies and TV Shows from around the net</summary>
+    <description lang="en">Morbius states the media is as fast as possible</description>
+
+    <platform>all</platform>
+	<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+
+</addon>
+
+<addon id="plugin.video.thering"
+	   name="The Ring"
+	   version="1.0.5"
+	   provider-name="The Hood">
+  <requires>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension library="resources/modules/" point="xbmc.python.module" />
+  <extension library="resources/sources/" point="xbmc.python.module" />
+  <extension library="resources/" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+	<reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en">Movies</summary>
+    <description lang="en">Movies</description>
+
+    <platform>all</platform>
+	<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+
+</addon>
+
+<addon id="plugin.video.youtube" name="YouTube" version="7.0.2~alpha7" provider-name="anxdpanic, bromix">
+    <requires>
+        <import addon="xbmc.python" version="3.0.1"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="inputstream.adaptive" version="20.3.1"/>
+        <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true"/>
+        <import addon="script.module.infotagger" version="0.0.5"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/startup.py"/>
+    <extension point="xbmc.python.module" library="resources/lib/"/>
+    <extension point="xbmc.addon.metadata">
+        <news>
+[fix] error when filtering short videos
+[fix] fix playback |contrib: MoojMidge|
+[upd] Translations updated from Kodi Weblate
+        </news>
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+        </assets>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <forum>https://ytaddon.panicked.xyz/forum</forum>
+        <website>https://www.youtube.com</website>
+        <source>https://github.com/anxdpanic/plugin.video.youtube</source>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="bg_BG">Добавка за YouTube</summary>
+        <summary lang="cs_CZ">Plugin pro YouTube</summary>
+        <summary lang="da_DK">Plugin til YouTube</summary>
+        <summary lang="de_DE">Plugin für YouTube</summary>
+        <summary lang="el_GR">Πρόσθετο YouTube</summary>
+        <summary lang="en_GB">Plugin for YouTube</summary>
+        <summary lang="es_ES">Plugin para YouTube</summary>
+        <summary lang="es_MX">Complemento para YouTube</summary>
+        <summary lang="fi_FI">YouTube-lisäosa</summary>
+        <summary lang="fr_FR">Plugin pour YouTube</summary>
+        <summary lang="he_IL">תוסף עבור YouTube</summary>
+        <summary lang="hr_HR">Dodatak za YouTube</summary>
+        <summary lang="hu_HU">YouTube kiegészítő</summary>
+        <summary lang="id_ID">Pengaya untuk YouTube</summary>
+        <summary lang="it_IT">Plugin per YouTube</summary>
+        <summary lang="ko_KR">유튜브 플러그인</summary>
+        <summary lang="nb_NO">Tillegg for YouTube</summary>
+        <summary lang="nl_NL">Plugin voor YouTube</summary>
+        <summary lang="pl_PL">Wtyczka YouTube</summary>
+        <summary lang="ru_RU">Видеодополнение YouTube</summary>
+        <summary lang="sk_SK">Doplnok pre YouTube</summary>
+        <summary lang="tr_TR">YouTube için eklenti</summary>
+        <summary lang="vi_VN">Plugin dành cho YouTube</summary>
+        <summary lang="zh_CN">油管插件</summary>
+        <summary lang="zh_TW">YouTube附加元件</summary>
+        <description lang="bg_BG">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
+        <description lang="cs_CZ">YouTube je jedna z největších webových stránek světa sdílející video.</description>
+        <description lang="da_DK">YouTube er et af verdens største videodelingswebsteder.</description>
+        <description lang="de_DE">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
+        <description lang="el_GR">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
+        <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
+        <description lang="es_ES">YouTube es uno de los sitios web más grande del mundo para compartir vídeos.</description>
+        <description lang="es_MX">YouTube es uno de los más grandes sitios web de intercambio de videos del mundo.</description>
+        <description lang="fi_FI">YouTube on yksi maailman suurimmista videoiden jakosivustoista.</description>
+        <description lang="fr_FR">YouTube est l&apos;un des plus grands sites de partage vidéos du monde.</description>
+        <description lang="he_IL">YouTube הוא אחד מאתרי שיתוף הווידאו הגדולים בעולם.</description>
+        <description lang="hr_HR">YouTube je jedna od najvećih stranica za dijeljenje video sadržaja na svijetu.</description>
+        <description lang="hu_HU">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
+        <description lang="id_ID">YouTube adalah salah satu situs web berbagi video terbesar di dunia.</description>
+        <description lang="it_IT">YouTube è uno dei più grandi siti di condivisione video del mondo.</description>
+        <description lang="ko_KR">유튜브는 세상에서 가장 큰 동영상 공유 사이트 중의 하나입니다.</description>
+        <description lang="nb_NO">YouTube er en av verdens største nettsider for videodeling.</description>
+        <description lang="nl_NL">YouTube is een van de grootste videodelenwebsite in de hele wereld.</description>
+        <description lang="pl_PL">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
+        <description lang="ru_RU">YouTube - популярнейший видеохостинговый сайт, предоставляющий пользователям услуги хранения, доставки и показа видео.</description>
+        <description lang="sk_SK">YouTube je jednou z najväčších stránok na zdieľanie videa na svete.</description>
+        <description lang="tr_TR">YouTube, dünya üzerindeki en büyük video paylaşma platformlarından birisidir.</description>
+        <description lang="vi_VN">YouTube là một trong những trang web chia sẻ video lớn nhất trên thế giới.</description>
+        <description lang="zh_CN">油管是世界上最大的视频分享网站之一。</description>
+        <description lang="zh_TW">Youtube 是全世界最大的影片分享網站。</description>
+        <disclaimer lang="cs_CZ">Tento plugin není schválen společností Google</disclaimer>
+        <disclaimer lang="da_DK">Dette plugin er ikke godkendt af Google</disclaimer>
+        <disclaimer lang="de_DE">Dieses Plugin ist nicht von Google befürwortet</disclaimer>
+        <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν έχει υϊοθετηθεί από την Google</disclaimer>
+        <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
+        <disclaimer lang="es_ES">Este add-on no está respaldado por Google</disclaimer>
+        <disclaimer lang="es_MX">Este complemento no está respaldado por Google</disclaimer>
+        <disclaimer lang="fi_FI">Google ei tue tätä lisäosaa</disclaimer>
+        <disclaimer lang="fr_FR">Ce module n&apos;est pas validé par Google</disclaimer>
+        <disclaimer lang="hr_HR">Ovaj dodatak nije podržan od strane Googlea</disclaimer>
+        <disclaimer lang="id_ID">Plugin ini tidak didukung oleh Google</disclaimer>
+        <disclaimer lang="it_IT">Questo plugin non è approvato da Google</disclaimer>
+        <disclaimer lang="ko_KR">이 플러그인은 Google의 허가를 받지 않았습니다</disclaimer>
+        <disclaimer lang="nl_NL">Deze plug-in wordt niet door Google ondersteund</disclaimer>
+        <disclaimer lang="pl_PL">Ta wtyczka nie jest zatwierdzona przez Google</disclaimer>
+        <disclaimer lang="ru_RU">Плагин не поддерживается Google</disclaimer>
+        <disclaimer lang="sk_SK">Tento doplnok nie je schválený spoločnosťou Google</disclaimer>
+        <disclaimer lang="tr_TR">Bu eklenti Google tarafından üretilmemiştir</disclaimer>
+        <disclaimer lang="vi_VN">Plugin này không được xác nhận bởi Google</disclaimer>
+        <disclaimer lang="zh_CN">此插件未被谷歌认可</disclaimer>
+        <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
+    </extension>
+</addon>
+
+<addon id="repository.nexus-one" name="Nexus-one Repo" version="2.4.2" provider-name="The Hood">
+	<extension point="xbmc.addon.repository" name="Nexus Repo">
+		<dir>
+			<info compressed="false">https://kodiwind.co.uk/trial/_repo/addons.xml</info>
+			<checksum>https://kodiwind.co.uk/trial/_repo/addons.xml.md5</checksum>
+			<datadir zip="true">https://kodiwind.co.uk/trial/_repo//</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+		</dir>
+      	<dir>
+            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+        </dir>
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en"></summary>
+		<description lang="en"></description>
+		<genre></genre>
+	<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+    </assets>
+	</extension>
+</addon>
+
+<addon id="repository.slyguy" name="SlyGuy Repository (slyguy.uk)" provider-name="SlyGuy" version="0.0.8">
+  <extension point="xbmc.addon.repository" name="SlyGuy Repository (slyguy.uk)">
+    <dir>
+      <info compressed="false">https://slyguy.uk/.repo/addons.xml</info>
+      <checksum>https://slyguy.uk/.repo/addons.xml.md5</checksum>
+      <datadir zip="true">https://slyguy.uk/.repo/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <description lang="en">Addons by SlyGuy (slyguy.uk)</description>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news></news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="skin.aeon.nox.nexus" version="8.0.3" name="Aeon Nox: Nexus" provider-name="The Hood">
+	<requires>
+		<import addon="xbmc.gui" version="5.15.0" />
+		<import addon="script.skinshortcuts" version="1.0.10" />
+		<import addon="service.library.data.provider" version="0.0.7" />
+		<import addon="resource.images.studios.white" version="0.0.1" />
+		<import addon="resource.images.recordlabels.white" version="0.0.1" />
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="af_ZA">Geskep deur BigNoid, Modded deur SiLVO, en Widgets deur Mr. V</summary>
+		<summary lang="de_DE">Erstellt von BigNoid, modifiziert von SiLVO, Widgets von Mr. V</summary>
+		<summary lang="el_GR">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_AU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_GB">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_NZ">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_US">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="es_ES">Creada por BigNoid, Modificada por SiLVO, y Widgets por Mr. V</summary>
+		<summary lang="et_EE">Looja: BigNoid, muutja: SiLVO, ja vidinad: Mr. V</summary>
+		<summary lang="fi_FI">BigNoidin tekemä ja SILVOn muokkaama. Widgetit Mr. V:ltä</summary>
+		<summary lang="fr_CA">Créé par BigNoid, modifié by SiLVO, et gadgets logiciels par Mr. V</summary>
+		<summary lang="fr_FR">Créé par BigNoid, Moddé par SiLVO, avec les widgets de M. V</summary>
+		<summary lang="gl_ES">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="he_IL">המעטפת נוצרה על ידי BigNoid, Modded by SiLVO, and והיישומונים על ידי Mr. VLO</summary>
+		<summary lang="hu_HU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="is_IS">Útbúið af BigNoid, breytt af SiLVO, viðmótshlutar eftir Mr. V</summary>
+		<summary lang="it_IT">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="ko_KR">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="lt_LT">Sukūrė BigNoid, modifikavo SiLVO bei valdiklius pridėjo Mr. V</summary>
+		<summary lang="ms_MY">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="nb_NO">Laget av BigNoid, modifisert av SiLVO, og miniprogrammer av Mr. V.</summary>
+		<summary lang="nl_NL">Ontwikkeld door BigNoid, aangepast door SiLVO, en Widgets door Mr. V</summary>
+		<summary lang="pl_PL">Stworzona przez BigNoid, zmodyfikowana przez SiLVO, a gadżety autorstwa Mr. V</summary>
+		<summary lang="pt_BR">Criado por BigNoid, Modificado por SiLVO e Widgets por Mr. V</summary>
+		<summary lang="pt_PT">Criado por BigNoid, Modded por SiLVO, e Widgets por Mr. V</summary>
+		<summary lang="ro_RO">Creat de BigNoid, Modificat de SiLVO, și widget-uri deMr. V</summary>
+		<summary lang="ru_RU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="sk_SK">Vytvoril BigNoid, Upravil SiLVO, miniaplikácie vytvoril Mr. V</summary>
+		<summary lang="sv_SE">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="th_TH">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="tr_TR">BigNoid tarafından oluşturuldu; Modlar SILVO'dan, Widget'lar Mr. V'den.</summary>
+		<summary lang="vi_VN">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V - Sự trở về</summary>
+		<summary lang="zh_CN">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="zh_TW">由BigNoid原創，SiLVO進行改造，以及由Mr. V製作的小工具</summary>
+		<description lang="af_ZA">Heeltemal oor ontwerp om 'n moderne aansig te skep, terwyl die klassieke Aeon gevoel behou word.</description>
+		<description lang="de_DE">Komplett neu designed für ein modernes Aussehen und das klassische Aeon-Feeling beizubehalten.</description>
+		<description lang="el_GR">Πλήρως επανασχεδιασμένο για να προσφέρει μια μοντέρνα αισθητική, διατηρώντας ταυτόχρονα την κλασική ομορφιά του Aeon.</description>
+		<description lang="en_AU">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_GB">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_NZ">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_US">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="es_ES">Completamente rediseñado para crear un aspecto moderno, pero conservando el toque clásico Aeon.</description>
+		<description lang="et_EE">Täielikult uuesti disainitud, et luua tänapäevane välimus samas säilitades klassikaline Aeoni tunnetus.</description>
+		<description lang="fi_FI">Täysin uudelleensuunniteltu moderni ulkoasu, kuitenkin tuntuen klassiselta Aeonilta.</description>
+		<description lang="fr_CA">Complètement remanié pour créer une apparence moderne, tout en conservant l’esprit classique d’Aeon.</description>
+		<description lang="fr_FR">Totalement revu pour créer un look moderne, en gardant l'expérience Aeon.</description>
+		<description lang="gl_ES">Redeseñado completamente para crear unha aparencia moderna ao tempo que mantén a sensación do clásico Aeon.</description>
+		<description lang="he_IL">עיצוב חדש היוצר מראה מודרני אך משמר את ההרגשה של Aeon הקלאסי.</description>
+		<description lang="hr_HR">Potpuno preoblikovan moderan izgled, uz zadržani klasični Aeon osjećaj.</description>
+		<description lang="hu_HU">Teljesen áttervezett modern kinézet, de megtartva a klasszikus Aeon érzetet.</description>
+		<description lang="is_IS">Endurhannað nútímalegt útlit í anda Aeon.</description>
+		<description lang="it_IT">Completamente ridisegnato per creare un look moderno, mantenendo la consueta qualità Aeon.</description>
+		<description lang="ko_KR">고전적인 Aeon 느낌을 유지하면서 현대적인 모습으로 완전히 다시 디자인하여 만들었습니다.</description>
+		<description lang="lt_LT">Pilnai atnaujinta, kad sukurtų modernią išvaizdą, išlaikant klasikinio Aeon pojūtį.</description>
+		<description lang="ms_MY">Direka semula sepenuhnya untuk hasilkan penampilan modern, tetapi masih mengekalkan penampilan Aeon klasik.</description>
+		<description lang="nb_NO">Helt redesignet for å tilby en moderne utforming, samtidig som den klassiske Aeon-følelsen er beholdt.</description>
+		<description lang="nl_NL">Volledig opnieuw ontworpen om een ​​moderne look te creëren, met behoud van het klassieke Aeon-gevoel.</description>
+		<description lang="pl_PL">Całkowicie przeprojektowana skóra Aeon, o nowoczesnym wyglądzie, zachowując klasyczny układ skóry Aeon.</description>
+		<description lang="pt_BR">Design completamente novo para criar um look moderno, mantendo o feeling do Aeon Clássico.</description>
+		<description lang="pt_PT">Completamente redesenhado para criar um visual moderno enquanto retém o toque clássico Aeon.</description>
+		<description lang="ro_RO">Complet reproiectat pentru a crea o înfățișare modernă, dar totuși păstrând atmosfera clasică Aeon.</description>
+		<description lang="ru_RU">Полностью переработан, чтобы создать современный облик, сохраняя при этом классическое чувство Aeon.</description>
+		<description lang="sk_SK">Kompletne prepracovaný dizajn s moderným vzhľadom pri zachovaní klasického štýlu Aeon.</description>
+		<description lang="sv_SE">Totalt omarbetad för att skapa ett modernt utseende, samtidigt som man behåller den klassiska Aeon-känslan.</description>
+		<description lang="th_TH">การออกแบบใหม่หมดจด เพื่อสร้างรูปลักษณ์ทันสมัย, ​​ขณะที่ยังคงความรู้สึกคลาสสิคของ Aeon.</description>
+		<description lang="tr_TR">Modern görünüme kavuşturmak için baştan tasarlandı, klasik Aeon hissi korundu</description>
+		<description lang="vi_VN">Thiết kế lại hoàn toàn để tạo nên một phong cách hiện đại, trong khi đó vẫn duy trì một cảm giác Aeon cổ điển.</description>
+		<description lang="zh_TW">完全的翻新設計以創造現代化的視覺感受，同時仍維持Aeon的經典外觀。</description>
+		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=210069</forum>
+		<website>https://github.com/mikesilvo164/Aeon-Nox-SiLVO</website>
+		<source>https://github.com/mikesilvo164/Aeon-Nox-SiLVO</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-09.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-10.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-11.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-12.jpg</screenshot>
+		</assets>
+		<news>[I][COLOR FFFF9800]v8.0.1[/COLOR][/I][CR]- Use Weblate for translations (thanks gade01)[CR]- Fix Embuary error when navigating to a TV Show Season[CR]- Add a clean paused screen option to Video OSD settings[CR]- Re-add script.grab.fanart support[CR]- Fix missing sortby labels[CR]- Add status indicator settings for BigFan[CR]- Fix Rick Dangerous error[CR]- Default letter jump fixes[CR]- Tweak MyFlix info for Episodes[CR]- Fix auto hide OSD options duplicating in other settings[I][COLOR FFFF9800]v8.0.0[/COLOR][/I][CR]- New status indicators[CR]- Add verified from Kodi Repo image + Rework language flags[CR]- Cleanup overlays + Updated HD/SD/3D indicators[CR]- Fix lyrics being covered by background for normal lyrics[CR]- Add missing buttons to DialogAddonInfo and PVRInfo[CR]- Fix typo in set ratings for UK:PG[CR]- Fix 4K Widget cases not appearing[CR][CR][B]All updates may contain various changes and/or improvements[/B][CR]For a more complete list visit:[CR][I][COLOR FFFF9800]https://github.com/mikesilvo164/Aeon-Nox-SiLVO/commits/master[/COLOR][/I]</news>
+	</extension>
+</addon>
+</addons>
